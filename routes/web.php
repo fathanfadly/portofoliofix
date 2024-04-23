@@ -17,9 +17,7 @@ use App\Http\Controllers\TemplateController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/Aboutme', function () {
-    return view('Aboutme');
-});
+
 Route::get('/home', [TemplateController::class, 'index']); // Menghubungkan '/main' dengan metode 'home' di TemplateController
 Route::get('/Aboutme', [TemplateController::class, 'Aboutme'])->name('Dashbor.Aboutme'); // Menghubungkan '/aboutme' dengan metode 'Aboutme' di TemplateController
 Route::get('/Example', [TemplateController::class, 'Example'])->name('Dashbor.Example'); // Menghubungkan '/example' dengan metode 'Example' di TemplateController
